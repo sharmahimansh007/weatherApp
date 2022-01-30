@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url(104839.jpg);
+    /* background-image: url(clearnight.jpg); */
+    background-size: cover;
+    box-sizing: border-box;
+  }
+
+  /* Weather heading */
+  #heading {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: rgb(172, 20, 51);
+    margin-top: 4em;
+    box-shadow: rgba(255, 254, 254, 0.09) 0px 2px 1px,
+      rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 20px;
+    font-family: "Pacifico", cursive;
+  }
+  span {
+    font-weight: 900;
+    color: rgb(8, 104, 80);
+  }
+  
+  /* search_bar css*/
+  #search_bar {
+    width: 45%;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+  }
+  
+  #search {
+    width: 50%;
+    /* border-radius: 20px; */
+    border: none;
+    padding: 10px 10px;
+    font-size: 1.7em;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border-bottom: 2px solid rgb(90, 90, 90);
+    font-family: "Mulish", sans-serif;
+  }
+  #search::placeholder {
+    color: rgb(68, 68, 68);
+  }
+  
+  /* search button css  */
+  #search_bar>button{
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+  }
+  button {
+    padding-top: 0.5em;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    font-family: "Mulish", sans-serif;
+    backdrop-filter: blur(10px);
+    background: rgba(133, 133, 133, 0.075);
+    border: 1px solid grey;
+    color: rgb(202, 197, 197);
+  }
+  button:hover {
+    cursor: pointer;
+    box-shadow: rgba(133, 133, 204, 0.25) 0px 30px 60px -12px inset,
+      rgba(149, 148, 148, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  /* weather output  css*/
+  #container {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-top: 1em;
+  }
+
+  /* weather info  css*/
+  
+  /* temprature and city time  */
+  #tempTime {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 28%;
+    color: rgb(160, 157, 157);
+    font-family: "Mulish", sans-serif;
+  }
+  .temp {
+    font-size: 4rem;
+    /* border: 1px solid red; */
+    display: flex;
+  }
+  .city {
+    font-size: 3rem;
+  }
+  .temp img {
+    /* border: 1px solid blue; */
+    width: 1.5em;
+    /* height: 4em; */
+    margin-left: 5%;
+  }
+
+  /* country and region css  */
+  #place {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    width: 28%;
+    color: rgb(160, 157, 157);
+    /* color: #131313; */
+    font-family: "Mulish", sans-serif;
+    text-align: right;
+  }
+  #place > :nth-child(1) {
+    /* border: 1px solid red; */
+    font-size: 1.8em;
+  }
+  #place > :nth-child(2) {
+    font-size: 2em;
+  }
+
+  /* other information and sevenday data div css  */
+  .otherinfo,
+  .sevendaysdatadiv {
+    /* border: 1px solid red; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #a09d9d;
+    /* color: #d3d1d1; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    padding: 20px 20px;
+    background: rgba(128, 128, 128, 0.082);
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 / px rgba(63, 62, 62, 0.226);
+  }
+
+  /* other information's div css  */
+  .otherinfo > div {
+    /* height: 150px; */
+    padding: 10px 5px;
+    border-left: 1px solid rgb(65, 65, 65);
+    box-shadow: 0 8px 32px 0px rgba(31, 30, 30, 0.226);
+    background: rgba(133, 133, 133, 0.075);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    
+
+  }
+
+  .otherinfo > div > :nth-child(1) {
+    padding-bottom: 0.7em;
+    /* border: 1px solid red; */
+    font-size: 1.3em;
+    
+  }
+  .otherinfo > div > :nth-child(2) {
+    font-size: 1.6em;
+    /* border: 1px solid red; */
+
+  }
+  .otherinfo > div > :nth-child(3) {
+    font-size: 1.6em;
+    /* border: 1px solid red; */
+
+  }
+  .otherinfo.none {
+    display: none;
+  }
+
+  /* map css  */
+  #map {
+    /* margin-left: 70%; */
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 25%;
+  }
+  iframe{
+    /* border: 1px solid red; */
+    width: 98%;
+    height: 280px;
+    
+  }
+  #map>.none{
+    display: none;
+  }
+
+  /* icons css  */
+  #icons {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40%;
+    width: 15%;
+  }
+  #icons>.none{
+    display: none;
+  }
+  #icons>button{
+    margin-top: 1em;
+    width: 4em;
+  margin-left: 8.5%;
+  }
+  #icons>button > img {
+    width: 3em;
+    
+    cursor: pointer;
+  }
+
+
+  /* sevenday data  */
+  .sevendaysdatadiv {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* border: 1px solid red; */
+
+  }
+
+
+  .sevendaydiv {
+    /* border: 1px solid red; */
+    padding: 10px 5px;
+    border-left: 1px solid rgb(65, 65, 65);
+    box-shadow: 0 8px 32px 0px rgba(31, 30, 30, 0.226);
+    background: rgba(133, 133, 133, 0.075);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    height: 250px;
+    /* border: 1px solid red; */
+  }
+  .sevendaydiv > div > h3 {
+    margin-bottom: .8em;
+  }
+  .sevendaydiv > div > p {
+    font-size: 1.2rem;
+    margin-top: 0.1em;
+  }
+  .sevendaydiv img {
+    width: 25%;
+  }
+  .sevendaydiv>h1{
+    margin-bottom: .6em;
+  }
+  #container > .none {
+    display: none;
+  }

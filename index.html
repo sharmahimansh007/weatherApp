@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@200;400&family=Pacifico&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="weather.css">
+    <title>How's The Weather</title>
+   
+  </head>
+  <body>
+    <!-- weather heading -->
+    <div id="heading">
+      <h1>How's the <span>WEATHER</span></h1>
+    </div>
+    <!-- weather search  bar-->
+    <div id="search_bar">
+      <input
+        type="text"
+        name=""
+        onkeypress="showweatherdata(event)"
+        id="search"
+        placeholder="weather of..."
+      />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <!-- weather ouput  section-->
+    <div id="container">
+      <!-- country and region section  -->
+      <div id="place">
+        <h1 class="country"></h1>
+        <h1 class="region"></h1>
+      </div>
+
+      <!-- temprature time and city section -->
+      <div id="tempTime">
+        <h1 class="city"></h1>
+        <h1 class="temp"></h1>
+        <h2 class="time"></h2>
+      </div>
+
+      <!-- other information section || bottom part -->
+      <div class="otherinfo none">
+        <div class="infodiv">
+          <h2>Weather Condition</h2>
+          <h1 class="day"></h1>
+        </div>
+        <div class="infodiv">
+          <h2>Humidity</h2>
+          <h1 class="humidity"></h1>
+        </div>
+        <div class="infodiv">
+          <h2>Pressure</h2>
+          <h1 class="pressure"></h1>
+        </div>
+        <div class="infodiv">
+          <h2>Wind Speed</h2>
+          <h1 class="wind"></h1>
+        </div>
+        <div class="infodiv">
+          <h2>Visibility</h2>
+          <h1 class="vis"></h1>
+        </div>
+        <div class="infodiv">
+          <h2>Sun Rise/Sun Set</h2>
+          <h1 class="sunrise"></h1>
+          <h1 class="sunset"></h1>
+        </div>
+        <div class="lastupdate">
+          <h2>Last Update</h2>
+          <h1 class="lastupdated"></h1>
+        </div>
+      </div>
+
+      <!-- sevenday data  -->
+      <div class="sevendaysdatadiv none">
+
+      </div>
+
+      <!-- map section  -->
+      <div id="map" class="none">
+        
+      </div>
+
+      <!--map and sevenday information  icons -->
+      <div id="icons" class="none">
+        <button onclick="showseven()"><img src="day7.png" alt="" class="sevenicon none" /></button>
+        <button onclick="showmap()"><img src="map.png" alt=""  class="mapicon none"/></button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- linked to weather.js page  -->
+<script src="weather.js"></script>
+
+
