@@ -7,7 +7,7 @@
 
     //  1st  weather API from 1 day data is fetching
       let response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=9c39165671ee41fa89b121936220601&q=${city}&days=7&aqi=yes&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=9c39165671ee41fa89b121936220601&q=${city}&days=7&aqi=yes&alerts=no`
       );
       let data = await response.json();
       // showWeather(data);
