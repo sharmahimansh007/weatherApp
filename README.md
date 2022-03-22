@@ -16,4 +16,4 @@
 <li> JavaScript </li>
 
 <h2>Go live</h2>
-<li> https://quirky-wiles-9eca95.netlify.app/ </li>
+<li>https://hows-weather.netlify.app/</li>
